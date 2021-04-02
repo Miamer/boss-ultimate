@@ -18,7 +18,12 @@ const app = express();
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
+// Si vous avez besoin d'un backend, par exemple une API, ajoutez ici votre middleware spécifique au backend personnalisé
+// app.use ('/ api', myApi);
+
+
 // Load material icons
+// Charger les icônes de matériau
 app.use('/api/icons', (req, res) => {
   res.json({
     records: [
@@ -28,6 +33,7 @@ app.use('/api/icons', (req, res) => {
 });
 
 // Load code preview
+// Charger l'aperçu du code
 app.use('/api/docs', (req, res) => {
   res.json({
     records: [
@@ -40,12 +46,15 @@ app.use('/', express.static('public', { etag: false }));
 app.use(favicon(path.join('public', 'favicons', 'favicon.ico')));
 
 // In production we need to pass these values in instead of relying on webpack
+// En production, nous devons transmettre ces valeurs au lieu de nous fier à webpack
 setup(app, {
   outputPath: resolve(process.cwd(), 'build'),
   publicPath: '/',
 });
 
 // get the intended host and port number, use localhost and port 3000 if not provided
+// récupère l'hôte et le numéro de port voulus, utilise localhost et le port 3000 s'ils ne sont pas fournis 
+
 const customHost = argv.host || process.env.HOST;
 const host = customHost || null; // Let http.Server use its default IPv6/4 host
 const prettyHost = customHost || 'localhost';

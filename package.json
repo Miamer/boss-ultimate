@@ -1,5 +1,6 @@
 {
   "name": "Starter-Project",
+  "homepage":"http://ultimate.rjic4028.odns.fr",
   "version": "1.6.0",
   "description": "Boss Ultimate - React Redux Material Admin Template",
   "private": true,
@@ -100,7 +101,7 @@
     "acorn": "^6.4.2",
     "autoprefixer": "^9.8.6",
     "autosuggest-highlight": "^3.1.1",
-    "axios": "^0.19.2",
+    "axios": "^0.19.2",   
     "bourbon": "^5.1.0",
     "bourbon-neat": "^3.0.0",
     "chalk": "^2.4.2",
